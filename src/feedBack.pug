@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Hind+Madurai:wght@300;400&family=Roboto&display=swap" rel="stylesheet"> 
+    title Document
+  body 
+    include ./common-modules/header/header
+    form(enctype = "multipart/form-data" method="post").form
+      .form__wrapper
+        input.form__item.form__name(placeholder='Имя' type='text')
+        input.form__item.form__email(placeholder='E-mail' type='email')
+        input.form__item.form__tel(placeholder='Телефон' name='phon' type='tel')
+        .box-massage
+          label.box-massage__label(for='Message')
+            textarea.box-massage__massage(placeholder='Напишите своё сообщение...' name='text' id='')
+          button.box-massage__btn
+              img(src= require('./asset/free-icon-send-mail-561104.png') alt='alt')
+          .file__wrapper
+            input(name='file' type='file' multiple).input.input__file
+            label.input__file-button(for='input__file')
+              span.input__file-icon-wrapper
+                img(src=require('./asset/free-icon-paper-clip-177.png') alt='alt').input__file-icon
+    include ./common-modules/footer/footer      
