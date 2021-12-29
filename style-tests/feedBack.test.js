@@ -22,7 +22,7 @@ describe("styles.test", () => {
       await page.setViewport({ width, height });
       // navigate to the page, served with webpack
       // IMPORTANT!: test assumes webpack is started
-      await page.goto("http://localhost:3000/feedBack.html", {
+      await page.goto("http://localhost:9000/feedBack.html", {
         waitUntil: "networkidle0",
       });
       await sleep(3000);
