@@ -12,8 +12,8 @@ module.exports = {
   rules: {
     "import/prefer-default-export": "off",
     "no-console": "off",
-    "no-shadow": "off",
     "no-unused-expressions": "off",
+    "no-new": "off",
     "max-len": [
       "error",
       {
