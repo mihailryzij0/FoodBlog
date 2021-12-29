@@ -13,7 +13,7 @@ html(lang="en")
                 .main-text 
                     h2.main-text__title Foot<span class = "color_orange">blog</span>
                     p.main-text__description Здесь вы найдете рецепты на любой вкус от лучшего шеф-повара Рыжего Михаила  
-                    a.main-text__btn.button(href="./allRicepts.html") смотреть все рецепты
+                    a.main-text__btn.button(href="./allRecipes.html") смотреть все рецепты
                 .main-visual 
                     .main-visual__image 
                         img(src=require('./asset/image-main.png')  alt="main")
@@ -30,7 +30,7 @@ html(lang="en")
                         p.recipe__description Эти толстые панкейки похожи на маленькие суфле: внутри напоминают крем, а снаружи золотистые и хрустящие. Стопка таких панкейков прекрасно смотрится на фото.
                         a.recipe__btn.button(href="./recipePage.html") Узнать рецепт
                     .recipe__img-box
-                        img.recipe__img(src=require('./asset/pankeik.jpg'),  alt="keik")
+                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="keik")
                 .recipe.section-recipes__item
                     .recipe__info 
                         h2.recipe__title.sub-title Запеченная курица
@@ -44,7 +44,7 @@ html(lang="en")
                         p.recipe__description Эти толстые панкейки похожи на маленькие суфле: внутри напоминают крем, а снаружи золотистые и хрустящие. Стопка таких панкейков прекрасно смотрится на фото.
                         a.recipe__btn.button(href="./recipePage.html") Узнать рецепт
                     .recipe__img-box
-                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="keik")
+                        img.recipe__img(src=require('./asset/pankeik.jpg'),  alt="keik")
         section.section-new.container
             .section-new__wrapper
                 h2.section-new__title.title#section-new Новое авторское блюдо 
@@ -56,12 +56,18 @@ html(lang="en")
                     .recipe__img-box
                         img.recipe__img(src=require('./asset/pankeik.jpg')  alt="keik")
         .slider
+            h2.section-recipes__title.title#anchor Слайдер
             .slider__wrapper
-                .slider__items
                 .slider__item
+                    img.slider__item-img(src=require('./asset/pankeik.jpg')  alt="keik")
                 .slider__item
+                    img.slider__item-img(src=require('./asset/eggplant.jpg')  alt="keik")
                 .slider__item
+                    img.slider__item-img(src=require('./asset/pankeik.jpg')  alt="keik")
                 .slider__item
-            a.slider__control.slider__control_prev(href='#', role='button')
-            a.slider__control.slider__control_next(href='#', role='button')
+                    img.slider__item-img(src=require('./asset/eggplant.jpg') alt="keik")
+                button.slider__control.slider__control_prev 
+                    img(src=require('./asset/arrow.png')  alt="alt")
+                button.slider__control.slider__control_next 
+                    img(src=require('./asset/arrow.png'),  alt="alt")
         include ./common-modules/footer/footer
