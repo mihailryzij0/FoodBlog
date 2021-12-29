@@ -22,7 +22,7 @@ describe("styles.test", () => {
       await page.setViewport({ width, height });
       // navigate to the page, served with webpack
       // IMPORTANT!: test assumes webpack is started
-      await page.goto("http://localhost:9000/", { waitUntil: "networkidle0" });
+      await page.goto("http://localhost:3000/", { waitUntil: "networkidle0" });
       await sleep(3000);
 
       const image = await page.screenshot();
