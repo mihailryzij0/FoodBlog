@@ -4,9 +4,9 @@
 
 [![Sanity Check](https://github.com/mihailryzij0/FoodBlog/actions/workflows/deploy.yml/badge.svg?branch=hw/7)](https://github.com/mihailryzij0/FoodBlog/actions/workflows/deploy.yml)
 
+[![Sanity Check](https://github.com/mihailryzij0/FoodBlog//actions/workflows/coverage.yml/badge.svg?branch=hw/8)](https://github.com/mihailryzij0/FoodBlog//actions/workflows/coverage.yml)
 
 :point_right: [Ссылка на приложение](https://mihailryzij0.github.io/FoodBlog/)
-
 
 Цель:
 В результате выполнения ДЗ вы создадите верстку для вашего личного блога с использование препроцессора SASS(/LESS)
