@@ -1,7 +1,7 @@
 export class Slider {
   constructor(selector, settings) {
     this.sliderWrapper = selector.querySelector(".slider__wrapper");
-    this.sliderImg = selector.querySelectorAll(".slider__item-img");
+    this.sliderImg = selector.querySelectorAll(".slider__img");
     this.btnPrev = selector.querySelector(".slider__control_prev");
     this.btnNext = selector.querySelector(".slider__control_next");
     this.sliderControl = selector.querySelectorAll(".slider__control");
@@ -81,9 +81,9 @@ export class Slider {
 
   addСlasses() {
     this.sliderImg.forEach((item) => {
-      item.classList.add("slider__item-img_activ");
+      item.classList.add("slider__img_hidden");
     });
-    this.sliderImg[this.current].classList.remove("slider__item-img_activ");
+    this.sliderImg[this.current].classList.remove("slider__img_hidden");
     this.dots.forEach((item) => {
       item.classList.remove("slider__dot_activ");
     });

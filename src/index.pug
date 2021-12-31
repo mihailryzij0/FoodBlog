@@ -30,21 +30,21 @@ html(lang="en")
                         p.recipe__description Эти толстые панкейки похожи на маленькие суфле: внутри напоминают крем, а снаружи золотистые и хрустящие. Стопка таких панкейков прекрасно смотрится на фото.
                         a.recipe__btn.button(href="./recipePage.html") Узнать рецепт
                     .recipe__img-box
-                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="keik")
+                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="alt")
                 .recipe.section-recipes__item
                     .recipe__info 
                         h2.recipe__title.sub-title Запеченная курица
                         p.recipe__description Эти толстые панкейки похожи на маленькие суфле: внутри напоминают крем, а снаружи золотистые и хрустящие. Стопка таких панкейков прекрасно смотрится на фото.
                         a.recipe__btn.button(href="./recipePage.html") Узнать рецепт
                     .recipe__img-box
-                        img.recipe__img(src=require('./asset/eggplant.jpg')  alt="keik")
+                        img.recipe__img(src=require('./asset/eggplant.jpg')  alt="alt")
                 .recipe.section-recipes__item
                     .recipe__info 
                         h2.recipe__title.sub-title Панкейки
                         p.recipe__description Эти толстые панкейки похожи на маленькие суфле: внутри напоминают крем, а снаружи золотистые и хрустящие. Стопка таких панкейков прекрасно смотрится на фото.
                         a.recipe__btn.button(href="./recipePage.html") Узнать рецепт
                     .recipe__img-box
-                        img.recipe__img(src=require('./asset/pankeik.jpg'),  alt="keik")
+                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="alt")
         section.section-new.container
             .section-new__wrapper
                 h2.section-new__title.title#section-new Новое авторское блюдо 
@@ -54,20 +54,16 @@ html(lang="en")
                         p.recipe__description Эти толстые панкейки похожи на маленькие суфле: внутри напоминают крем, а снаружи золотистые и хрустящие. Стопка таких панкейков прекрасно смотрится на фото.
                         a.recipe__btn.button(href="./recipePage.html") Узнать рецепт
                     .recipe__img-box
-                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="keik")
+                        img.recipe__img(src=require('./asset/pankeik.jpg')  alt="alt")
         .slider
             h2.section-recipes__title.title#anchor Слайдер
             .slider__wrapper
-                .slider__item
-                    img.slider__item-img(src=require('./asset/pankeik.jpg')  alt="keik")
-                .slider__item
-                    img.slider__item-img(src=require('./asset/eggplant.jpg')  alt="keik")
-                .slider__item
-                    img.slider__item-img(src=require('./asset/pankeik.jpg')  alt="keik")
-                .slider__item
-                    img.slider__item-img(src=require('./asset/eggplant.jpg') alt="keik")
+                img.slider__img(src=require('./asset/pankeik.jpg')  alt="alt")
+                img.slider__img(src=require('./asset/eggplant.jpg')  alt="alt")
+                img.slider__img(src=require('./asset/pankeik.jpg')  alt="alt")
+                img.slider__img(src=require('./asset/eggplant.jpg') alt="alt")
                 button.slider__control.slider__control_prev 
                     img(src=require('./asset/arrow.png')  alt="alt")
                 button.slider__control.slider__control_next 
-                    img(src=require('./asset/arrow.png'),  alt="alt")
+                    img(src=require('./asset/arrow.png')  alt="alt")
         include ./common-modules/footer/footer
