@@ -34,6 +34,7 @@
     "eslint-plugin-jest": "^25.3.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "html-webpack-skip-assets-plugin": "^1.0.3",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
