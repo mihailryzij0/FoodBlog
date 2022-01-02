@@ -1,7 +1,7 @@
 export class Slider {
   constructor(selector, settings) {
     this.sliderWrapper = selector.querySelector(".slider__wrapper");
-    this.sliderContainer = selector.querySelector('.slider__container')
+    this.sliderContainer = selector.querySelector(".slider__container");
     this.sliderImg = selector.querySelectorAll(".slider__img");
     this.btnPrev = selector.querySelector(".slider__control_prev");
     this.btnNext = selector.querySelector(".slider__control_next");
@@ -45,7 +45,7 @@ export class Slider {
       clearInterval(this.idInterval);
       this.sliderNext();
     });
-    this.btnPrev.addEventListener("click", () =>{
+    this.btnPrev.addEventListener("click", () => {
       clearInterval(this.idInterval);
       this.sliderPrev();
     });
@@ -56,27 +56,29 @@ export class Slider {
       });
     }
     let x1 = null;
-    this.sliderContainer.addEventListener('pointerdown',(event)=>{
+    this.sliderContainer.addEventListener("pointerdown", (event) => {
       x1 = event.clientX;
-      this.sliderContainer.addEventListener('pointermove',(event)=>{
-        if(!x1){
-          return false
-        }
-        let x2 = event.clientX;
-        x1 > x2 ? this.sliderNext():this.sliderPrev();
-        clearInterval(this.idInterval);
-        x1 = null;
-      },{once: true})
-
-    })
-
-  
-
+      this.sliderContainer.addEventListener(
+        "pointermove",
+        (e) => {
+          if (!x1) {
+            return;
+          }
+          const x2 = e.clientX;
+          x1 > x2 ? this.sliderNext() : this.sliderPrev();
+          clearInterval(this.idInterval);
+          x1 = null;
+        },
+        { once: true }
+      );
+    });
   }
 
   autoplay() {
     if (this.config.autoplay === true) {
-      this.idInterval = setInterval(() => this.sliderNext(), this.config.interval);        
+      this.idInterval = setInterval(() => {
+        this.sliderNext();
+      }, this.config.interval);
     }
   }
 

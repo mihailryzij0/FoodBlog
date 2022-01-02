@@ -30,7 +30,7 @@ describe("Slider", () => {
     btnPrev = el.querySelector(".slider__control_prev");
     btnNext = el.querySelector(".slider__control_next");
     sliderImg = el.querySelectorAll(".slider__img");
-    
+
     jest.useFakeTimers();
     jest.spyOn(global, "setInterval");
   });
@@ -96,7 +96,7 @@ describe("Slider", () => {
   //   });
   //   let sliderWrapper = el.querySelector(".slider__container");
   //   sliderWrapper.dispatchEvent(new PointerEvent("pointerdown", {
-   
+
   //         clientX:300
 
   //   }));

@@ -76,13 +76,14 @@
       height: 100%;
       transition: 0.5s ease;
     }
-    @media (min-width: 600px){
+
+    @media (min-width: 600px) {
       &:hover {
         &::after {
           width: 100%;
         }
       }
-    } 
+    }
 
     &_activ {
       &::after {
