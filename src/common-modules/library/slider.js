@@ -1,11 +1,13 @@
 export class Slider {
   constructor(selector, settings) {
     this.sliderWrapper = selector.querySelector(".slider__wrapper");
+    this.sliderContainer = selector.querySelector('.slider__container')
     this.sliderImg = selector.querySelectorAll(".slider__img");
     this.btnPrev = selector.querySelector(".slider__control_prev");
     this.btnNext = selector.querySelector(".slider__control_next");
     this.sliderControl = selector.querySelectorAll(".slider__control");
     this.dots;
+    this.idInterval;
     this.current = 0;
     this.config = {
       autoplay: false,
@@ -39,25 +41,42 @@ export class Slider {
   }
 
   addListener() {
-    this.btnNext.addEventListener("click", () => this.sliderNext());
-    this.btnPrev.addEventListener("click", () => this.sliderPrev());
+    this.btnNext.addEventListener("click", () => {
+      clearInterval(this.idInterval);
+      this.sliderNext();
+    });
+    this.btnPrev.addEventListener("click", () =>{
+      clearInterval(this.idInterval);
+      this.sliderPrev();
+    });
     for (let index = 0; index < this.dots.length; index += 1) {
       this.dots[index].addEventListener("click", () => {
         this.current = index;
         this.addСlasses();
       });
     }
+    let x1 = null;
+    this.sliderContainer.addEventListener('pointerdown',(event)=>{
+      x1 = event.clientX;
+      this.sliderContainer.addEventListener('pointermove',(event)=>{
+        if(!x1){
+          return false
+        }
+        let x2 = event.clientX;
+        x1 > x2 ? this.sliderNext():this.sliderPrev();
+        clearInterval(this.idInterval);
+        x1 = null;
+      },{once: true})
+
+    })
+
+  
+
   }
 
   autoplay() {
     if (this.config.autoplay === true) {
-      const x = setInterval(() => this.sliderNext(), this.config.interval);
-      this.sliderControl.forEach((el) => {
-        el.addEventListener("click", () => clearInterval(x));
-      });
-      this.dots.forEach((el) => {
-        el.addEventListener("click", () => clearInterval(x));
-      });
+      this.idInterval = setInterval(() => this.sliderNext(), this.config.interval);        
     }
   }
 

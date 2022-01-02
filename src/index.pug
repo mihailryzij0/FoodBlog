@@ -58,10 +58,11 @@ html(lang="en")
         .slider
             h2.section-recipes__title.title#anchor Слайдер
             .slider__wrapper
-                img.slider__img(src=require('./asset/pankeik.jpg')  alt="alt")
-                img.slider__img(src=require('./asset/eggplant.jpg')  alt="alt")
-                img.slider__img(src=require('./asset/pankeik.jpg')  alt="alt")
-                img.slider__img(src=require('./asset/eggplant.jpg') alt="alt")
+                .slider__container
+                    img.slider__img(src=require('./asset/pankeik.jpg')  alt="alt")
+                    img.slider__img(src=require('./asset/eggplant.jpg')  alt="alt")
+                    img.slider__img(src=require('./asset/pankeik.jpg')  alt="alt")
+                    img.slider__img(src=require('./asset/eggplant.jpg') alt="alt")
                 button.slider__control.slider__control_prev 
                     img(src=require('./asset/arrow.png')  alt="alt")
                 button.slider__control.slider__control_next 

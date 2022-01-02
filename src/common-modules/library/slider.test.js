@@ -11,6 +11,7 @@ describe("Slider", () => {
     el.innerHTML = `  
     <div class="slider">
       <div class="slider__wrapper">
+        <div class="slider__container">
           <div class="slider__item">
           <img class="slider__img" alt="keik" />
           </div>
@@ -20,6 +21,7 @@ describe("Slider", () => {
           <div class="slider__item">
           <img class="slider__img" alt="keik" />
           </div>
+        </div>  
           <button class="slider__control slider__control_prev"></button>
           <button class="slider__control slider__control_next"></button>    
       </div>
@@ -28,6 +30,7 @@ describe("Slider", () => {
     btnPrev = el.querySelector(".slider__control_prev");
     btnNext = el.querySelector(".slider__control_next");
     sliderImg = el.querySelectorAll(".slider__img");
+    
     jest.useFakeTimers();
     jest.spyOn(global, "setInterval");
   });
@@ -85,4 +88,26 @@ describe("Slider", () => {
     expect(sliderDots[2].classList.contains("slider__dot_activ")).toBeTruthy();
     expect(sliderImg[2].classList.contains("slider__img_hidden")).toBeFalsy();
   });
+  // it("checking the work sliderDots", () => {
+  //   new Slider(document.querySelector(".slider"), {
+  //     autoplay: true,
+  //     interval: 5000,
+  //     doots: true,
+  //   });
+  //   let sliderWrapper = el.querySelector(".slider__container");
+  //   sliderWrapper.dispatchEvent(new PointerEvent("pointerdown", {
+   
+  //         clientX:300
+
+  //   }));
+  //   sliderWrapper.dispatchEvent(new PointerEvent("pointermove", {
+
+  //       clientX:400
+
+  //   }));
+
+  //   const sliderDots = document.querySelectorAll(".slider__dot");
+  //   expect(sliderDots[0].classList.contains("slider__dot_activ")).toBeTruthy();
+  //   expect(sliderImg[0].classList.contains("slider__img_hidden")).toBeFalsy();
+  // });
 });
