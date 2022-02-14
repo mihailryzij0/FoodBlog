@@ -1,0 +1,94 @@
+.form {
+  &__wrapper {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #d26a22;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  &__item {
+    border-bottom: 1px solid #d26a22;
+    background-color: transparent;
+    margin-bottom: 75px;
+    color: #27300f;
+    padding-left: 15px;
+    outline: none;
+    font-size: 18px;
+  }
+
+  &__name {
+    flex-basis: 100%;
+  }
+
+  &__email {
+    flex-basis: 42%;
+  }
+
+  &__tel {
+    flex-basis: 42%;
+  }
+}
+
+.box-massage {
+  border: 1px solid #d26a22;
+  padding: 20px;
+  border-radius: 5px;
+  flex-basis: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__label {
+    flex-basis: 85%;
+    font-size: 18px;
+    color: #27300f;
+  }
+
+  &__massage {
+    background-color: transparent;
+    color: #27300f;
+    padding-top: 5px;
+    resize: none;
+    width: 100%;
+    height: 156px;
+    outline: none;
+    font-size: 18px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    cursor: pointer;
+    height: 31px;
+    width: 31px;
+    margin-right: 15px;
+
+    :hover {
+      box-shadow: #27300f;
+    }
+  }
+}
+
+.file {
+  &__wrapper {
+    height: 31px;
+    width: 31px;
+    position: relative;
+  }
+}
+
+.input {
+  &__file {
+    opacity: 0;
+    position: absolute;
+  }
+
+  &__file-button {
+    width: 31px;
+    height: 31px;
+  }
+}
